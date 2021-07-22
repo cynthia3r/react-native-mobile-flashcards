@@ -11,21 +11,20 @@ Mobile Flashcards is a React Native app developed for both Android and iOS platf
 
 ## Create React Native App (CRNA)
 This project was bootstrapped with [Create React Native App](https://github.com/expo/create-react-native-app)
-## Installation and usage
-### Project dependencies
+## Project dependencies
+Project dependencies can be referenced from [`package.json`](package.json)
+### Installation and usage
 In the project directory, you can run the below scripts:
 * install all project dependencies either with `yarn install` or `npm install`
 * start the app either with `npm start` or `yarn start`
     Note this will open Expo developer tools in the browser.
-
-Please refer dependencies and scripts section in [`package.json`](package.json) for more details.
 ### Launching the app:
-* scan the QR code with Expo Client App to launch the app on your mobile device
-    [Expo Go on Google Play (Android)](https://play.google.com/store/apps/details?id=host.exp.exponent) or 
-    [Expo on the App Store (iOS)](https://apps.apple.com/us/app/expo-client/id982107779)  
+* scan the QR code with Expo Client App to launch the Flashcards app on your mobile device
+    - [Expo Go on Google Play (Android)](https://play.google.com/store/apps/details?id=host.exp.exponent) or 
+    - [Expo on the App Store (iOS)](https://apps.apple.com/us/app/expo-client/id982107779)  
 * you can also use Android or iOS simulator to run the app on your computer
-    [Android Emulator Setup](https://docs.expo.io/workflow/android-studio-emulator/) or 
-    [iOS Simulator SetUp](https://docs.expo.io/workflow/ios-simulator/)
+    - [Android Emulator Setup](https://docs.expo.io/workflow/android-studio-emulator/) or 
+    - [iOS Simulator SetUp](https://docs.expo.io/workflow/ios-simulator/)
 ### Additional information on how to build package file for app publishing
 * Install [Expo CLI](https://docs.expo.io/get-started/installation/)
 * run `exp build:android` to build the .apk (Android Application Package) file
