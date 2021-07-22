@@ -82,3 +82,14 @@ export async function removeDeckEntry(key) {
         console.error(err);
     }
 }
+
+export async function removeCardEntry(title, card) {
+    try {
+        const results = await AsyncStorage.getItem(FLASHCARDS_STORAGE_KEY);
+        const data = JSON.parse(results);
+        delete data[title].cards.splice(card, 1);
+        AsyncStorage.setItem(FLASHCARDS_STORAGE_KEY, JSON.stringify(data));
+    } catch (err) {
+        console.error(err);
+    }
+}
