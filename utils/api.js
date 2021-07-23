@@ -1,4 +1,4 @@
-import { AsyncStorage } from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { decks } from './_data';
 
 const FLASHCARDS_STORAGE_KEY = 'Flashcards:decks';
