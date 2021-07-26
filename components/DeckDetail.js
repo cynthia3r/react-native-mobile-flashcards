@@ -1,42 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import Deck from './Deck';
-import { green } from '../utils/colors';
+import { green, white } from '../utils/colors';
 
 
-function DeckDetail(props) {
+export default function DeckDetail(props) {
     console.log("props:", props);
     
     const navigation = useNavigation();
     const deckId = props.route.params.title;
-    const deck = props.decks[deckId];
+
     return (
         <View style={styles.container}>
-            <View>
-                <Deck id={deckId} />
+            <View style={styles.block}>
+                <Deck id={deckId} key={deckId} />
             </View>
-            <View>
+            <View style={styles.block}>
                 <TouchableOpacity
-                    // key={deckId}
                     style={styles.btn}
                     onPress={() => navigation.navigate(
                         'AddCard',
                         {title: deckId }
                     )}
                 >
-                    <Text>Add Card</Text>
+                    <Text style={styles.btnTitle}>Add Card</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    // key={deckId}
                     style={styles.btn}
                     onPress={() => navigation.navigate(
                         'Quiz',
                         {title: deckId }
                     )}
                 >
-                    <Text>Start a Quiz</Text>
+                    <Text style={styles.btnTitle}>Start a Quiz</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -47,26 +44,25 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        paddingTop: 0,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 200,
+        alignItems: 'center',
     },
-    title: {
-        textAlign: 'center',
-        fontSize: 38,
+    block: {
+        marginBottom: 30,
     },
     btn: {
         backgroundColor: green,
-    },
-    block: {
         marginBottom: 20,
+        width: 150,
+        height: 30,
+        borderWidth: 1,
+    },
+    btnTitle: {
+        textAlign: 'center',
+        fontSize: 20,
+        color: white,
     }
 });
-
-
-function mapStateToProps(state, { title }) {
-    const decks = state;
-
-    return {
-        decks,
-    };
-}
-
-export default connect(mapStateToProps)(DeckDetail);

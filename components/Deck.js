@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
+import { green } from '../utils/colors';
 
 class Deck extends Component {
 
@@ -13,10 +14,10 @@ class Deck extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <Text style={styles.deckText}>{deck.title}</Text>
+                    <Text style={styles.deckTxt}>{deck.title}</Text>
                 </View>
                 <View>
-                <Text style={styles.cardext}>{deck.cards.length} cards</Text>
+                    <Text style={styles.cardTxt}>{deck.cards.length} cards</Text>
                 </View>
             </View>
         ); 
@@ -30,14 +31,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    title: {
+    deckTxt: {
         textAlign: 'center',
-        fontSize: 38,
+        fontSize: 30,
+        color: green
     },
-    deckText: {
-        fontSize: 28,
-    },
-    cardText: {
+    cardTxt: {
+        textAlign: 'center',
         fontSize: 20,
     }
 });

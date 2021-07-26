@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { connect } from 'react-redux';
 import { addCard } from '../actions/index';
 import { addCardToDeck } from '../utils/api';
-import { white, green } from '../utils/colors';
+import { white, green, gray } from '../utils/colors';
 
 function AddCard(props) {
 
@@ -29,44 +29,45 @@ function AddCard(props) {
             answer: answer
         };
 
-        props.dispatch(addCard(deckId, card));
+        props.addCard(deckId, card);
         addCardToDeck(deckId, card);
 
         navigation.goBack();
-
     }
 
     return (
         <View style={styles.container}>
             <View style={styles.block}>
                 <Text style={styles.title}>
-                    Add a Question card:
+                    Add a Card to the deck [{deckId}]
                 </Text>
             </View>
             <View style={styles.block}>
                 <TextInput
-                style={styles.input}
+                style={styles.txtinput}
                 placeholder="Question"
                 onChangeText={(text) => handleChangeQuestionText(text)}
                 value ={question}
+                autoFocus={true}
                 />
             </View>
             <View style={styles.block}>
                 <TextInput
-                style={styles.input}
+                style={styles.txtinput}
                 placeholder="Answer"
                 onChangeText={(text) => handleChangeAnswerText(text)}
                 value ={answer}
                 />
             </View>
-            <TouchableOpacity
-                // key={deck.title}
-                style={styles.btn}
-                onPress={handleSubmit}
-                disabled={question === '' || answer === ''}
-            >
-                <Text>Submit</Text>
-            </TouchableOpacity>
+            <View style={styles.block}>
+                <TouchableOpacity
+                    style={styles.btn}
+                    onPress={handleSubmit}
+                    disabled={question === '' || answer === ''}
+                >
+                    <Text style={styles.btnTitle}>Submit</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -75,27 +76,42 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        paddingTop: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },
-    input: {
+    txtinput: {
         backgroundColor: white,
-        fontSize: 20
+        borderColor: gray,
+        borderWidth: 1,
+        paddingLeft: 10,
+        paddingRight: 10,
+        fontSize: 20,
+        height: 30,
+    },
+    block: {
+        marginBottom: 30,
+    },
+    title: {
+        textAlign: 'center',
+        fontSize: 30,
+        color: green,
     },
     btn: {
         backgroundColor: green,
-    },
-    block: {
         marginBottom: 20,
+        width: 150,
+        height: 30,
+        borderWidth: 1,
+    },
+    btnTitle: {
+        textAlign: 'center',
+        fontSize: 20,
+        color: white,
     }
 });
 
-
-function mapStateToProps(state, { title }) {
-    return {
-        title,
-    };
-}
-
-
-export default connect(mapStateToProps)(AddCard);
+export default connect(null, { addCard })(AddCard);

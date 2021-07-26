@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Platform, TouchableOpacity } from '
 import { connect } from 'react-redux';
 import { handleInitialData } from '../actions/index';
 import Deck from './Deck';
+import { orange } from '../utils/colors';
 class DeckList extends Component {
 
     componentDidMount() {
@@ -12,29 +13,23 @@ class DeckList extends Component {
         const { decks, navigation } = this.props;
 
         return (
-            <View>
-                <View style={styles.block}>
-                    <Text style={styles.title}Mobile Flashcards></Text>
-                </View>
-                <ScrollView style={styles.container}>
-                    {Object.values(decks).map((deck) => {
-                        return (
-                            <TouchableOpacity
-                                style={styles.block}
-                                key={deck.title}
-                                onPress={() => navigation.navigate(
-                                    'DeckDetail',
-                                    {title: deck.title }
-                                )}
-                            >
-                                <Deck id={deck.title} />
-                                {/* <Deck id={deck.title} key={deck.title} /> */}
-                            </TouchableOpacity>
-                        );
-                    })}
-                </ScrollView>
-            </View>
-            
+            <ScrollView style={styles.container}>
+                <Text style={styles.title}>Mobile Flashcards</Text>
+                {Object.values(decks).map((deck) => {
+                    return (
+                        <TouchableOpacity
+                            style={styles.block}
+                            key={deck.title}
+                            onPress={() => navigation.navigate(
+                                'DeckDetail',
+                                {title: deck.title }
+                            )}
+                        >
+                            <Deck id={deck.title} key={deck.title}/>
+                        </TouchableOpacity>
+                    );
+                })}
+            </ScrollView>
         ); 
     } 
 }
@@ -43,13 +38,18 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        paddingTop: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 20,
+    },
+    block: {
+        marginBottom: 30,
     },
     title: {
         textAlign: 'center',
-        fontSize: 38,
-    },
-    block: {
-        marginBottom: 20,
+        fontSize: 30,
+        color: orange,
     }
 });
 
