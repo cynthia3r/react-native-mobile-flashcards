@@ -48,12 +48,10 @@ function Dashboard() {
             <Tab.Screen
                 name='Deck List'
                 component={DeckList}
-                options={{ title: 'Deck List', headerShown: true }}
             />
             <Tab.Screen
                 name='Add Deck'
                 component={AddDeck}
-                options={{ title: 'Add Deck', headerShown: true }}
             />
         </Tab.Navigator>
     );
@@ -69,8 +67,9 @@ export default function AppNavigator() {
                 />
                 <Stack.Navigator>
                     <Stack.Screen
-                        name='Mobile Flashcards'
+                        name='Dashboard'
                         component={Dashboard}
+                        options={{headerShown: false}}
                     />
                     <Stack.Screen
                         name='DeckDetail'
