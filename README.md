@@ -71,15 +71,10 @@ and provides the following helper methods to manage AsyncStorage database:
 * `addCardToDeck`: take in two arguments, `title` and `card`, and will add the card to the list of questions for the deck with the associated title.
 
 ## Application screen
-1. **App Home screen**
 [<img src="screenshots/DeckList_ExpoGo.jpg" height="700" width="400"/>](screenshots/DeckList_ExpoGo.jpg)
-2. **Add Deck screen**
 [<img src="screenshots/AddDeck_ExpoGo.jpg" height="700" width="400" />](screenshots/AddDeck_ExpoGo.jpg")
-3. **Deck Detail View screen**
 [<img src="screenshots/DeckDetail_ExpoGo.jpg" height="700" width="400" />](screenshots/DeckDetail_ExpoGo.jpg)
-4. **Add Card screen**
 [<img src="screenshots/AddCard_ExpoGo.jpg" height="700" width="400" />](screenshots/AddCard_ExpoGo.jpg)
-5. **Quiz View screen**
 [<img src="screenshots/Quiz_ExpoGo.jpg" height="700" width="400" />](screenshots/Quiz_ExpoGo.jpg)
 ## Author
 Sayantani Chaudhuri
