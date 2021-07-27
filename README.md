@@ -73,8 +73,11 @@ and provides the following helper methods to manage AsyncStorage database:
 ## Application screen
 [<img src="screenshots/DeckList_ExpoGo.jpg" height="700" width="400"/>](screenshots/DeckList_ExpoGo.jpg)
 [<img src="screenshots/AddDeck_ExpoGo.jpg" height="700" width="400" />](screenshots/AddDeck_ExpoGo.jpg")
+
 [<img src="screenshots/DeckDetail_ExpoGo.jpg" height="700" width="400" />](screenshots/DeckDetail_ExpoGo.jpg)
 [<img src="screenshots/AddCard_ExpoGo.jpg" height="700" width="400" />](screenshots/AddCard_ExpoGo.jpg)
+
+[<img src="screenshots/QuizViewWhenNoCardsInDeck_ExpoGo.jpg" height="700" width="400" />](screenshots/QuizViewWhenNoCardsInDeck_ExpoGo.jpg)
 [<img src="screenshots/Quiz_ExpoGo.jpg" height="700" width="400" />](screenshots/Quiz_ExpoGo.jpg)
 ## Author
 Sayantani Chaudhuri
