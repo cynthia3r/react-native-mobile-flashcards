@@ -33,6 +33,7 @@ There are different approaches to launch the app as described below:
 * to check build status run `exp build:status` 
 ## Technologies used
 * `react-native`
+* `redux`
 * `react-navigation`
 * `expo`
 ## Platforms tested
@@ -70,11 +71,16 @@ and provides the following helper methods to manage AsyncStorage database:
 * `addCardToDeck`: take in two arguments, `title` and `card`, and will add the card to the list of questions for the deck with the associated title.
 
 ## Application screen
-1. App Home screen
+1. **App Home screen**
 ![App Home Screen](screenshots/DeckList_ExpoGo.jpg "App Home screen")
-2. Deck Detail View screen
+2. **Add Deck screen**
+![Add Deck Screen](screenshots/AddDeck_ExpoGo.jpg "Add Deck screen")
+3. **Deck Detail View screen**
 ![Deck Detail View screen](screenshots/DeckDetail_ExpoGo.jpg "Deck Detail View screen")
-3. Add Card screen
+4. **Add Card screen**
 ![Add Card screen](screenshots/AddCard_ExpoGo.jpg "Add Card screen")
-4. Quiz View screen
+5. **Quiz View screen**
 ![Quiz View screen](screenshots/Quiz_ExpoGo.jpg "Quiz View screen")
+
+## Author
+Sayantani Chaudhuri
