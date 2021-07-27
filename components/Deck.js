@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
-import { green } from '../utils/colors';
+import { green, white } from '../utils/colors';
 
 class Deck extends Component {
 
@@ -17,7 +17,10 @@ class Deck extends Component {
                     <Text style={styles.deckTxt}>{deck.title}</Text>
                 </View>
                 <View>
-                    <Text style={styles.cardTxt}>{deck.cards.length} cards</Text>
+                    <Text style={styles.cardTxt}>
+                        {deck.cards.length}
+                        {deck.cards.length === 1 ? 'card' : 'cards'}
+                    </Text>
                 </View>
             </View>
         ); 
@@ -27,14 +30,14 @@ class Deck extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         alignItems: 'center',
         justifyContent: 'center',
     },
     deckTxt: {
         textAlign: 'center',
         fontSize: 30,
-        color: green
+        color: green,
     },
     cardTxt: {
         textAlign: 'center',
@@ -46,7 +49,7 @@ function mapStateToProps(state, { id }) {
     const deck = state[id];
 
     return {
-        deck
+        deck,
     };
 }
 

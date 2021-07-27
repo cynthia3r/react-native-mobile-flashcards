@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,7 +11,7 @@ import AddDeck from '../components/AddDeck';
 import AddCard from '../components/AddCard';
 import Quiz from '../components/Quiz';
 import QuizResult from '../components/QuizResult';
-import { green, gray } from '../utils/colors';
+import { white, green, gray } from '../utils/colors';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -97,6 +97,6 @@ export default function AppNavigator() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
     }
 });

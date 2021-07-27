@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
+import { connect } from 'react-redux';
 import { addDeck } from '../actions/index';
 import { saveDeckTitle } from '../utils/api';
 import { gray, green, white, orange } from '../utils/colors'
@@ -62,7 +62,7 @@ function AddDeck(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 20,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         fontSize: 20,
-        height: 30
+        height: 30,
     },
     block: {
         marginBottom: 30,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         fontSize: 30,
-        color: green
+        color: green,
     },
     btn: {
         backgroundColor: green,

@@ -75,7 +75,7 @@ function AddCard(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 20,

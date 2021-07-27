@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Platform, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
-import { handleInitialData } from '../actions/index';
 import Deck from './Deck';
-import { orange } from '../utils/colors';
+import { handleInitialData } from '../actions/index';
+import { orange, white } from '../utils/colors';
 class DeckList extends Component {
 
     componentDidMount() {
@@ -37,7 +37,7 @@ class DeckList extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 20,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { connect } from 'react-redux';
 import { green, red, white, orange} from '../utils/colors';
@@ -16,9 +16,9 @@ function Quiz(props) {
     const [showAnswer, setStatus] = React.useState('false');
     const [quizCompletionStatus, setQuizCompletionStatus] = React.useState('false');
 
+    //using the Effect hook
     useEffect(() => {
         if (quizCompletionStatus === 'true') {
-            console.log('final: ', numCorrectAnswers);
             resetQuiz();
         }
     }, [quizCompletionStatus]);
@@ -104,7 +104,6 @@ function Quiz(props) {
                         <Text style={styles.btnTitle}>Correct</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        // key={deck.title}
                         style={[styles.btn, {backgroundColor: red}]}
                         onPress={() => {
                             nextQuestion();
@@ -122,7 +121,7 @@ function Quiz(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 20,
