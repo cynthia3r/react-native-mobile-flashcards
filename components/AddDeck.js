@@ -29,9 +29,9 @@ function AddDeck(props) {
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             <View>
-                <Text style={[styles.title, {color: orange}]}>Add Deck</Text>
+                <Text style={[styles.title, {color: orange} ]}>Add Deck</Text>
             </View>
             <View style={styles.container}>
                 <View style={styles.block}>
