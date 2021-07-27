@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Animated } from 'react-native';
 import { connect } from 'react-redux';
 import Deck from './Deck';
 import { handleInitialData } from '../actions/index';
 import { orange, white } from '../utils/colors';
 class DeckList extends Component {
+    state = {
+        bounceValue: new Animated.Value(1),
+    };
+
+    startAnimation = () => {
+        console.log('animation started');
+            Animated.timing(this.state.bounceValue, { 
+                duration: 100,
+                toValue: 1.5,
+                useNativeDriver: true,
+            }).start(() => this.endAnimation());
+    };
+
+    endAnimation = () => {
+        console.log('animation started');
+            Animated.timing(this.state.bounceValue, { 
+                duration: 100,
+                toValue: 1,
+                useNativeDriver: true,
+            }).start();
+    };
+
 
     componentDidMount() {
         this.props.handleInitialData();
@@ -20,12 +42,17 @@ class DeckList extends Component {
                         <TouchableOpacity
                             style={styles.block}
                             key={deck.title}
-                            onPress={() => navigation.navigate(
+                            onPress={() => {
+                                this.startAnimation();
+                                navigation.navigate(
                                 'DeckDetail',
                                 {title: deck.title }
-                            )}
+                            )
+                        }}
                         >
-                            <Deck id={deck.title} key={deck.title}/>
+                            <Animated.View style={{transform: [{scale: this.state.bounceValue}]}}>
+                                <Deck id={deck.title} key={deck.title}/>
+                            </Animated.View>
                         </TouchableOpacity>
                     );
                 })}
