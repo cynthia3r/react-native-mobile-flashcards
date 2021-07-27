@@ -19,7 +19,7 @@ class DeckList extends Component {
     };
 
     endAnimation = () => {
-        console.log('animation started');
+        console.log('animation completed');
             Animated.timing(this.state.bounceValue, { 
                 duration: 100,
                 toValue: 1,
