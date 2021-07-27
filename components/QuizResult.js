@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { connect } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
-import Deck from './Deck';
+import { connect } from 'react-redux';
+import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import { green, white, orange } from '../utils/colors';
 
 
 function QuizResult(props) {
+
+    //using the Effect hook
+    useEffect(() => {
+        clearLocalNotification().then(setLocalNotification);
+    }, []);
+
     const navigation = useNavigation();
 
     console.log("props:", props);
@@ -62,7 +68,7 @@ function QuizResult(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: white,
         paddingTop: 20,
         paddingLeft: 20,
         paddingRight: 20,
