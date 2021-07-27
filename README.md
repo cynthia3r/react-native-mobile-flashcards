@@ -72,15 +72,14 @@ and provides the following helper methods to manage AsyncStorage database:
 
 ## Application screen
 1. **App Home screen**
-![App Home Screen](screenshots/DeckList_ExpoGo.jpg "App Home screen"){:height="100px" width="40px"}
+[<img src="screenshots/DeckList_ExpoGo.jpg" height="100" width="40"/>](screenshots/DeckList_ExpoGo.jpg)
 2. **Add Deck screen**
-![Add Deck Screen](screenshots/AddDeck_ExpoGo.jpg "Add Deck screen"){:height="100px" width="40px"}
+[<img src="screenshots/AddDeck_ExpoGo.jpg" height="100" width="40" />](screenshots/AddDeck_ExpoGo.jpg")
 3. **Deck Detail View screen**
-![Deck Detail View screen](screenshots/DeckDetail_ExpoGo.jpg "Deck Detail View screen"){:height="100px" width="40px"}
+[<img src="screenshots/DeckDetail_ExpoGo.jpg" height="100" width="40" />](screenshots/DeckDetail_ExpoGo.jpg)
 4. **Add Card screen**
-![Add Card screen](screenshots/AddCard_ExpoGo.jpg "Add Card screen"){:height="100px" width="40px"}
+[<img src="screenshots/AddCard_ExpoGo.jpg" height="100" width="40" />](screenshots/AddCard_ExpoGo.jpg)
 5. **Quiz View screen**
-![Quiz View screen](screenshots/Quiz_ExpoGo.jpg "Quiz View screen"){:height="100px" width="40px"}
-
+[<img src="screenshots/Quiz_ExpoGo.jpg" height="100" width="40" />](screenshots/Quiz_ExpoGo.jpg)
 ## Author
 Sayantani Chaudhuri
