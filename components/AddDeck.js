@@ -18,6 +18,7 @@ function AddDeck(props) {
     }
 
     const handleSubmit = () => {
+
         props.addDeck(deckTitle);
         saveDeckTitle(deckTitle);
         
@@ -30,7 +31,7 @@ function AddDeck(props) {
     return (
         <View>
             <View>
-            <Text style={[styles.title, {color: orange}]}>Add Deck</Text>
+                <Text style={[styles.title, {color: orange}]}>Add Deck</Text>
             </View>
             <View style={styles.container}>
                 <View style={styles.block}>
