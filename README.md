@@ -72,15 +72,15 @@ and provides the following helper methods to manage AsyncStorage database:
 
 ## Application screen
 1. **App Home screen**
-![App Home Screen](screenshots/DeckList_ExpoGo.jpg "App Home screen"){:height="700px" width="400px"}
+![App Home Screen](screenshots/DeckList_ExpoGo.jpg "App Home screen"){:height="100px" width="40px"}
 2. **Add Deck screen**
-![Add Deck Screen](screenshots/AddDeck_ExpoGo.jpg "Add Deck screen")
+![Add Deck Screen](screenshots/AddDeck_ExpoGo.jpg "Add Deck screen"){:height="100px" width="40px"}
 3. **Deck Detail View screen**
-![Deck Detail View screen](screenshots/DeckDetail_ExpoGo.jpg "Deck Detail View screen")
+![Deck Detail View screen](screenshots/DeckDetail_ExpoGo.jpg "Deck Detail View screen"){:height="100px" width="40px"}
 4. **Add Card screen**
-![Add Card screen](screenshots/AddCard_ExpoGo.jpg "Add Card screen")
+![Add Card screen](screenshots/AddCard_ExpoGo.jpg "Add Card screen"){:height="100px" width="40px"}
 5. **Quiz View screen**
-![Quiz View screen](screenshots/Quiz_ExpoGo.jpg "Quiz View screen")
+![Quiz View screen](screenshots/Quiz_ExpoGo.jpg "Quiz View screen"){:height="100px" width="40px"}
 
 ## Author
 Sayantani Chaudhuri
