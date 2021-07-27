@@ -46,14 +46,16 @@ export async function saveDeckTitle(title) {
 }
 
 export async function addCardToDeck(title, card) {
+    const deck = await getDeck(title);
+    const updatedCards = [...deck.cards, card];
+    
     try {
-        const deck = await getDeck(title);
         await AsyncStorage.mergeItem(
             FLASHCARDS_STORAGE_KEY,
             JSON.stringify({
                 [title]: {
                     title,
-                    cards: [...deck.cards].concat[card],
+                    cards: updatedCards,
                 }
             })
         );
